@@ -30,27 +30,10 @@ public class BusinessSessions {
             return this;
         }
 
-        public Builder setFirstSession(String session){
+        public Builder setSession(String session) {
             this.sessions.add(session);
             return this;
         }
-        public Builder setSecondSession(String session){
-            this.sessions.add(session);
-            return this;
-        }
-        public Builder setThirdSession(String session){
-            this.sessions.add(session);
-            return this;
-        }
-        public Builder setFourthSession(String session){
-            this.sessions.add(session);
-            return this;
-        }
-        public Builder setFifthSession(String session){
-            this.sessions.add(session);
-            return this;
-        }
-
         public BusinessSessions build() {
             return new BusinessSessions(this);
         }
@@ -60,7 +43,7 @@ public class BusinessSessions {
 
     public String plan(){
         String output = "Business Meeting Plan for participant "+ this.participantID +
-                " (department: " + this.department;
+                " (department: " + this.department + ")";
         int i=1;
         for(String session : sessions){
             output += "\n" + i + ". " + session;
