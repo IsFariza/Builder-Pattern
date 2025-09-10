@@ -16,8 +16,10 @@ public class Main {
         BusinessSessions designer = new BusinessSessions.Builder()
                 .setDepartment("Design")
                 .setId(101)
-                .setFirstSession("Briefing")
-                .setSecondSession("Design Session")
+                .setSession("Briefing")
+                .setSession("Design Session")
+                .setSession("Future Strategies Discussion")
+                .setSession("Final General Meeting")
                 .build();
 
 
