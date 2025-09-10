@@ -1,8 +1,6 @@
 package Assignment_1;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
 
 public class BusinessSessions {
 
@@ -41,14 +39,14 @@ public class BusinessSessions {
 
     }
 
-    public String plan(){
+     public String plan(){
         String output = "Business Meeting Plan for participant "+ this.participantID +
                 " (department: " + this.department + ")";
-        int i=1;
-        for(String session : sessions){
-            output += "\n" + i + ". " + session;
-            i++;
+         
+        for(int i=0; i<this.sessions.size();i++){
+            output+= "\n" + (i+1) + ". " + this.sessions.get(i);
         }
+         
         return output;
     }
     @Override
@@ -58,3 +56,4 @@ public class BusinessSessions {
 
 
 }
+
